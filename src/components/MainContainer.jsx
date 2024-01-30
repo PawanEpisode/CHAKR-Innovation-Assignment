@@ -1,28 +1,26 @@
 import React from "react";
-import Widget from "./Widget";
-import AnimatedProgressBar from "./AnimatedProgressBar";
 import CustomerWidget from "./CustomerWidget";
 import ChatsWidget from "./ChatsWidget";
 import TopStatesWidget from "./TopStatesWidget";
 import NewDealsWidget from "./NewDealsWidget";
 import FirstRowWidgetContainer from "./FirstRowWidgetContainer";
-import TopMonth from "./TopMonth";
-import TopYear from "./TopYear";
 import TopBuyer from "./TopBuyer";
 import GraphWidget from "./GraphWidget";
+import buyeravatar from '../assets/buyeravatar.png';
+import TopMonthYear from "./TopMonthYear";
 
 const MainConatiner = () => {
   return (
     <div className="w-full flex flex-col gap-4">
       <FirstRowWidgetContainer />
       <div className="w-full flex gap-4">
-        <CustomerWidget />
+        <CustomerWidget sortBy={'Newest'}/>
         <div className="w-1/2 flex flex-col gap-4">
-          <GraphWidget />
+          <GraphWidget title={'Graph'}/>
           <div className="w-full flex gap-4">
-            <TopMonth title={'Top month'} />
-            <TopYear title={'Top year'} />
-            <TopBuyer title={'Top buyer'} />
+            <TopMonthYear title={'Top month'} subtitle={'November'} ismonth value={'2019'}/>
+            <TopMonthYear title={'Top year'} subtitle={'2023'} value={'96K'}/>
+            <TopBuyer title={'Top buyer'} name={'Maggie Johnson'} company={'Oasis Organic Inc.'} profilePic={buyeravatar}/>
           </div>
         </div>
       </div>

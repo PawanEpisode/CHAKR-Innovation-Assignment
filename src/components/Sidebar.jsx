@@ -11,6 +11,7 @@ import search from "../assets/search.png";
 import logoicon from "../assets/Logo-icon.png";
 import { Link } from "react-router-dom";
 import { navItems } from "../utils/constants";
+import CustomText from "./CustomText";
 
 const Sidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -76,7 +77,7 @@ const Sidebar = () => {
       <div className="mt-auto p-4 ">
         <button
           className={`relative ${
-            isCollapsed ? "-top-4 left-16" : "-top-4 left-[270px]"
+            isCollapsed ? "-top-4 left-12" : "-top-4 left-[260px]"
           } flex justify-center p-2 bg-gray-300 items-center rounded-full`}
           onClick={() => setIsCollapsed(!isCollapsed)}
         >
@@ -93,8 +94,8 @@ const Sidebar = () => {
           <img src={profile} alt="profile-icon"/>
           {!isCollapsed && (
             <div>
-              <div className="text-[#131313] text-sm font-medium">Pawan Kumar</div>
-              <span className="bg-[#FFCD71] rounded-3xl font-normal text-[10px] px-1.5">Admin</span>
+              <CustomText className="text-[#131313] text-sm font-medium" title={'Pawan Kumar'}/>
+              <CustomText className="bg-[#FFCD71] rounded-3xl font-normal text-[10px] px-1.5" title={'Admin'}/>
             </div>
           )}
         </div>
@@ -103,14 +104,14 @@ const Sidebar = () => {
         <button className="flex items-center gap-2 p-2 rounded-3xl hover:bg-[#FFF7E8] w-full">
           <img src={setting} alt="setting-icon"/>
           {/* Placeholder for settings icon */}
-          {!isCollapsed && <span className="font-normal text-sm">Settings</span>} 
+          {!isCollapsed && <CustomText className={'font-normal text-sm'} title={'Settings'}/>} 
         </button>
 
         {/* Logout Button */}
         <button className="flex items-center gap-2 p-2 w-full mt-2">
           <img src={logout} alt="logout-icon"/>
           {/* Placeholder for logout icon */}
-          {!isCollapsed && <span className="font-normal text-sm text-[#B01212]">Logout</span>}
+          {!isCollapsed && <CustomText className="font-normal text-sm text-[#B01212]" title={'Logout'}/>}
         </button>
       </div>
     </div>
