@@ -8,15 +8,21 @@ import CustomText from "./CustomText";
 
 const CustomerItem = ({ profilePic, customerName, customerCompanyName }) => {
   return (
-    <div className="w-full flex p-4 gap-3 items-center hover:bg-[#FFF7E8] rounded-2xl">
+    <div className="w-full group/customer flex p-4 gap-3 items-center hover:bg-[#FFF7E8] rounded-2xl">
       <div className="flex justify-center items-center w-8 h-8">
         <img src={profilePic} alt="customer-pic" />
       </div>
       <div className="flex items-start flex-1 justify-center gap-1 flex-col">
-        <CustomText className="text-sm text-[#131313] font-medium" title={customerName}/>
-        <CustomText className="text-xs text-[#454545] font-normal" title={customerCompanyName}/>
+        <CustomText
+          className="text-sm text-[#131313] font-medium"
+          title={customerName}
+        />
+        <CustomText
+          className="text-xs text-[#454545] font-normal"
+          title={customerCompanyName}
+        />
       </div>
-      <div className="flex items-center gap-3">
+      <div className="flex invisible group-hover/customer:visible items-center gap-3">
         {[comment, star, edit].map((item, index) => (
           <div
             key={index}

@@ -29,8 +29,8 @@ const Sidebar = () => {
 
   return (
     <div
-      className={`flex flex-col max-w-[320px] items-start 
-      rounded-2xl gap-4 p-4 bg-white text-black h-full ${
+      className={`flex flex-col max-w-[320px] items-start
+      rounded-2xl gap-4 p-4 bg-white text-black ${
         isCollapsed ? "w-28" : "w-1/4"
       } transition-width shadow-2xl duration-300`}
     >
@@ -91,27 +91,40 @@ const Sidebar = () => {
 
         {/* User Profile */}
         <div className="flex items-center gap-2 mb-4">
-          <img src={profile} alt="profile-icon"/>
+          <img src={profile} alt="profile-icon" />
           {!isCollapsed && (
-            <div>
-              <CustomText className="text-[#131313] text-sm font-medium" title={'Pawan Kumar'}/>
-              <CustomText className="bg-[#FFCD71] rounded-3xl font-normal text-[10px] px-1.5" title={'Admin'}/>
+            <div className="w-full flex flex-col">
+              <CustomText
+                className="text-[#131313] text-sm font-medium"
+                title={"Pawan Kumar"}
+              />
+              <CustomText
+                className="bg-[#FFCD71] rounded-3xl w-fit font-normal text-[10px] px-1.5"
+                title={"Admin"}
+              />
             </div>
           )}
         </div>
 
         {/* Settings Button */}
         <button className="flex items-center gap-2 p-2 rounded-3xl hover:bg-[#FFF7E8] w-full">
-          <img src={setting} alt="setting-icon"/>
+          <img src={setting} alt="setting-icon" />
           {/* Placeholder for settings icon */}
-          {!isCollapsed && <CustomText className={'font-normal text-sm'} title={'Settings'}/>} 
+          {!isCollapsed && (
+            <CustomText className={"font-normal text-sm"} title={"Settings"} />
+          )}
         </button>
 
         {/* Logout Button */}
         <button className="flex items-center gap-2 p-2 w-full mt-2">
-          <img src={logout} alt="logout-icon"/>
+          <img src={logout} alt="logout-icon" />
           {/* Placeholder for logout icon */}
-          {!isCollapsed && <CustomText className="font-normal text-sm text-[#B01212]" title={'Logout'}/>}
+          {!isCollapsed && (
+            <CustomText
+              className="font-normal text-sm text-[#B01212]"
+              title={"Logout"}
+            />
+          )}
         </button>
       </div>
     </div>
