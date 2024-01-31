@@ -1,5 +1,14 @@
 # Dashboard App with Dynamic Graph 
 
+Visit the App :- [DASHBOARD](https://chakr-innovation-assignment.vercel.app/)
+
+![CHAKR_UI_1]('/public/CHAKR_UI_1.png');
+
+![CHAKR_UI_2]('/public/CHAKR_UI_2.png');
+
+![CHAKR_UI_3]('/public/CHAKR_UI_3.png');
+
+
 ## Table of Contents
 
 - [Dashboard App with Dynamic Graph](#dashboard-app-with-dynamic-graph)
