@@ -40,7 +40,7 @@ const ScrollToTopButton = () => {
           zIndex: 1000,
         }}
       >
-        <img className="w-20 h-20" src={scrolltop} alt="scroll-top" />
+        <img className="w-20 h-20" src={scrolltop} alt="scroll-top" loading="lazy"/>
       </button>
     )
   );

@@ -6,7 +6,7 @@ const TopBuyer = ({ title, name, company, profilePic }) => {
       <span className="text-[#7D7D7D] text-base font-semibold">{title}</span>
       <div className="flex flex-col justify-end items-start gap-2">
         <div className="flex justify-center items-center w-6 h-6">
-          <img src={profilePic} alt="top-buyer-icon" />
+          <img src={profilePic} alt="top-buyer-icon" loading="lazy"/>
         </div>
         <div className="flex flex-col gap-1 items-start justify-center">
           <span className="text-[#131313] font-medium text-xs">{name}</span>

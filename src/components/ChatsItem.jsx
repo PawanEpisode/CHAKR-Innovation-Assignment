@@ -9,7 +9,7 @@ const ChatsItem = ({ profile, isUnread = false }) => {
       }`}
     >
       <div className="relative flex w-8 h-8 justify-center items-center">
-        <img src={profile} alt="profile-pic" className="w-8 h-8 rounded-3xl" />
+        <img src={profile} alt="profile-pic" loading="lazy" className="w-8 h-8 rounded-3xl" />
         {isUnread && (
           <img
             src={redchat}

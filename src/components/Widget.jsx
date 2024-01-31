@@ -26,7 +26,7 @@ const Widget = ({
         <>
           <div className="flex items-baseline gap-2">
             <AnimatedProgressBar targetProgress={value} delay={delay}/>
-            {greenArrow && <img src={greenarrow} alt="link" />}
+            {greenArrow && <img src={greenarrow} alt="link" loading="lazy"/>}
           </div>
           <CustomText className="font-normal text-sm text-[#454545]" title={subTitle}/>
         </>

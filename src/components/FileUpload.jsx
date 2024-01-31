@@ -5,7 +5,7 @@ const FileUpload = ({ onDataLoaded }) => {
     const loadCSV = async () => {
       try {
         const response = await fetch(
-          "../../public/CHAKR-innovation-dataset.csv"
+          '/CHAKR-innovation-dataset.csv'
         );
         const text = await response.text();
         parseCSV(text);

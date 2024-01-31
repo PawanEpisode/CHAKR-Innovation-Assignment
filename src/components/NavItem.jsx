@@ -30,7 +30,7 @@ const NavItem = ({ item, isCollapsed }) => {
             >
               {item.name}
             </span>
-            {hasChildren && <img className="w-4 h-4" src={isOpen ? uparrow : downarrow} />}
+            {hasChildren && <img className="w-4 h-4" loading="lazy" src={isOpen ? uparrow : downarrow} />}
           </div>
         )}
       </div>

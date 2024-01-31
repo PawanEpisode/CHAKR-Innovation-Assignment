@@ -7,7 +7,7 @@ const RedirectButton = ({children, clickableLink}) => {
         <span className="text-sm font-normal text-[#734A00]">
           {clickableLink}
         </span>
-        <img className="w-4" src={brownarrow} alt="link" />
+        <img className="w-4" src={brownarrow} alt="link" loading="lazy"/>
       </button>
   )
 }

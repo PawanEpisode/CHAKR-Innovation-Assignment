@@ -1,8 +1,9 @@
 import React from 'react'
-
+import deals from '../assets/deals.png';
+import CommonPage from '../components/CommonPage';
 const Deals = () => {
   return (
-    <div>Deals</div>
+    <CommonPage title={'deals'} profile={deals}/>
   )
 }
 

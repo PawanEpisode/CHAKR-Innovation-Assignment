@@ -10,7 +10,7 @@ const CustomerItem = ({ profilePic, customerName, customerCompanyName }) => {
   return (
     <div className="w-full group/customer flex p-4 gap-3 items-center hover:bg-[#FFF7E8] rounded-2xl">
       <div className="flex justify-center items-center w-8 h-8">
-        <img src={profilePic} alt="customer-pic" />
+        <img src={profilePic} alt="customer-pic" loading="lazy"/>
       </div>
       <div className="flex items-start flex-1 justify-center gap-1 flex-col">
         <CustomText
@@ -29,14 +29,14 @@ const CustomerItem = ({ profilePic, customerName, customerCompanyName }) => {
             className="flex w-9 h-9 p-2 justify-center items-center gap-2"
           >
             <button className="cursor-pointer">
-              <img src={item} alt="comment-button" />
+              <img src={item} alt="comment-button" loading="lazy"/>
             </button>
           </div>
         ))}
-        <img className="mx-3" src={line} alt="line" />
+        <img className="mx-3" src={line} alt="line" loading="lazy"/>
         <div className="flex w-9 h-9 p-2 justify-center items-center gap-2">
           <button className="cursor-pointer">
-            <img src={threedot} alt="threedot-button" />
+            <img src={threedot} alt="threedot-button" loading="lazy"/>
           </button>
         </div>
       </div>

@@ -38,7 +38,7 @@ const Sidebar = () => {
         {/* Logo here */}
         {
           <Link to={"/"} className="">
-            <img src={!isCollapsed ? logo : logoicon} />
+            <img src={!isCollapsed ? logo : logoicon} loading="lazy"/>
           </Link>
         }
       </div>
@@ -54,6 +54,7 @@ const Sidebar = () => {
               className={isCollapsed ? "" : "w-4 h-4"}
               src={isCollapsed ? bar : search}
               alt="search-button"
+              loading="lazy"
             />
           </button>
           {!isCollapsed && (
@@ -85,13 +86,14 @@ const Sidebar = () => {
             className="w-6 h-6"
             src={isCollapsed ? collapseright : collapseleft}
             alt="collapse-sidebar"
+            loading="lazy"
           />
         </button>
         {/* Bottom section with user profile, settings, and logout */}
 
         {/* User Profile */}
         <div className="flex items-center gap-2 mb-4">
-          <img src={profile} alt="profile-icon" />
+          <img src={profile} alt="profile-icon" loading="lazy"/>
           {!isCollapsed && (
             <div className="w-full flex flex-col">
               <CustomText
@@ -108,7 +110,7 @@ const Sidebar = () => {
 
         {/* Settings Button */}
         <button className="flex items-center gap-2 p-2 rounded-3xl hover:bg-[#FFF7E8] w-full">
-          <img src={setting} alt="setting-icon" />
+          <img src={setting} alt="setting-icon" loading="lazy"/>
           {/* Placeholder for settings icon */}
           {!isCollapsed && (
             <CustomText className={"font-normal text-sm"} title={"Settings"} />
@@ -117,7 +119,7 @@ const Sidebar = () => {
 
         {/* Logout Button */}
         <button className="flex items-center gap-2 p-2 w-full mt-2">
-          <img src={logout} alt="logout-icon" />
+          <img src={logout} alt="logout-icon" loading="lazy"/>
           {/* Placeholder for logout icon */}
           {!isCollapsed && (
             <CustomText

@@ -22,6 +22,7 @@ const CustomerWidget = ({ sortBy }) => {
               className="w-3.5 h-3.5"
               src={sortbydownarrow}
               alt="sort-by-down-arrow"
+              loading="lazy"
             />
           </button>
         </div>

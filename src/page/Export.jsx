@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import exports from '../assets/exports.png';
+import CommonPage from '../components/CommonPage';
 
 const Export = () => {
   return (
-    <div>Export</div>
+    <CommonPage title={'exports'} profile={exports}/>
   )
 }
 

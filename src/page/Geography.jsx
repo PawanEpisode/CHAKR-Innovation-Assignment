@@ -1,8 +1,10 @@
-import React from 'react'
+import React from 'react';
+import geography from '../assets/geographies.png';
+import CommonPage from '../components/CommonPage';
 
 const Geography = () => {
   return (
-    <div>Geography</div>
+    <CommonPage title={'geography'} profile={geography}/>
   )
 }
 

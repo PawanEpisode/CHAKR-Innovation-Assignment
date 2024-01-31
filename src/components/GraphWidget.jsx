@@ -75,7 +75,7 @@ const GraphWidget = ({ title }) => {
           <div className="flex items-center gap-1">
             <span className="text-[#454545] text-sm font-normal">Yearly</span>
             <button>
-              <img src={graphsortby} alt="graph-sortby" />
+              <img src={graphsortby} alt="graph-sortby" loading="lazy"/>
             </button>
           </div>
         </div>
