@@ -5,7 +5,7 @@ const FileUpload = ({ onDataLoaded }) => {
     const loadCSV = async () => {
       try {
         const response = await fetch(
-          '/CHAKR-innovation-dataset.csv'
+          'https://chakr-innovation-assignment.vercel.app/CHAKR-innovation-dataset.csv'
         );
         const text = await response.text();
         parseCSV(text);
